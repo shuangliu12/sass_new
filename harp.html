@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chartype="utf-8">
+    <link rel="icon" href="lib/img/favicon.ico">
+    <title>Shuang Liu</title>
+    <meta name="description" content="Welcome to shuangliudesign">
+    <meta name="keywords" content="shuang liu">
+    <link rel="stylesheet" type="text/css" href="lib/css/header.css">
+    
+    <script type="text/javascript" src="lib/js/paper-full.min.js"></script>
+    <script src="http://w.soundcloud.com/player/api.js"></script>
+</head>
+
+
+<body>
+  <div id="headerArea">
+    <p><a href="index.html">Home</a></p>
+    <p><a href="web_design.html">Web Design</a></p>
+    <p><a href="bulls_and_cows.html">Mobile Design</a></p>
+    <p><a href="fine_art.html">Fine Art</a></p>
+    <p><a href="digital_art.html">Digital Art</a></p>
+  </div>
+  <canvas id="myCanvas", style="height:500px;width:100%;"></canvas>
+  <p style="position:absolute;top:0;z-index:-100;">Hello</p>
+  <iframe id="soundcloud_widget"
+      src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/99774949&show_artwork=false&liking=false&sharing=false&auto_play=false"
+      width="42"
+      height="12"
+      frameborder="no"
+      style="position:absolute;top:0;z-index:-100;"
+      ></iframe>
+
+
+
+  <script>
+     var widget = false;
+     widget = SC.Widget(document.querySelector('#soundcloud_widget'));
+  </script>
+
+  <script type="text/paperscript" canvas="myCanvas">
+      //draw the harp
+      var canvas = document.querySelector('#myCanvas');
+      var canvasWidth = 9999;
+      var harpWidth = 400;
+      // handles determine the angle of the curve
+      var handleIn = new Point(-100, -100);
+      var handleOut = new Point(100, 100);
+      if (canvas && canvas.clientWidth)
+      {
+        canvasWidth = canvas.clientWidth;
+      }
+      if (canvasWidth < 500)
+      {
+        harpWidth = canvasWidth * 0.8;
+      }
+      var startPoint = new Point(harpWidth/4, 25);
+      // these 2 segments create the top wavy line
+      var firstSegment = new Segment(startPoint, null, handleOut);
+      var secondPoint = new Point(startPoint.x + harpWidth, startPoint.y + harpWidth/20);
+      var secondSegment = new Segment(secondPoint, handleIn, null);
+      var path = new Path();
+      if (canvasWidth < 500)
+      {
+        path.segments = [
+          [startPoint.x, startPoint.y],
+          [startPoint.x + harpWidth, startPoint.y],
+          [startPoint.x + harpWidth/10, startPoint.y + harpWidth],
+          [startPoint.x + harpWidth/4, startPoint.y + harpWidth],
+          [startPoint.x + harpWidth/4, startPoint.y + harpWidth + harpWidth/10],
+          [startPoint.x, startPoint.y + harpWidth + harpWidth/10],
+          [startPoint],
+        ];
+      }
+      else 
+      {
+        // same as above except for top wavy line
+        path.segments = [
+          [firstSegment],
+          [secondSegment],
+          [startPoint.x + harpWidth/10, startPoint.y + harpWidth],
+          [startPoint.x + harpWidth/4, startPoint.y + harpWidth],
+          [startPoint.x + harpWidth/4, startPoint.y + harpWidth + harpWidth/10],
+          [startPoint.x, startPoint.y + harpWidth + harpWidth/10],
+          [startPoint],
+        ];
+      }
+      path.fillColor = 'black';
+      var innerPath = new Path();
+      innerPath.segments = [
+        [startPoint.x + harpWidth*7/8, startPoint.y + harpWidth/10],
+        [startPoint.x + harpWidth*3/40, startPoint.y + harpWidth],
+        [startPoint.x + harpWidth/10, startPoint.y + (harpWidth*0.15)],
+      ];
+      innerPath.fillColor = 'white';
+
+      //draw the strings
+      var slope = (innerPath.segments[0].point.y - innerPath.segments[1].point.y)/ (innerPath.segments[0].point.x - innerPath.segments[1].point.x);
+      numStrings = 5;
+      var stringX = innerPath.segments[1].point.x;
+      var strings = [];
+      for (var i = 0; i < numStrings; i++)
+      {
+        stringX += (innerPath.segments[0].point.x - innerPath.segments[1].point.x)/(numStrings+1);
+        var stringY = slope*(stringX - innerPath.segments[1].point.x) + innerPath.segments[1].point.y;
+        var line1 = new Path({
+            strokeColor: 'black'
+            ,strokeWidth: 3
+            ,segments: [[stringX,innerPath.segments[0].point.y],[stringX, stringY]]
+        });
+        strings.push(line1);
+      }
+
+      var musicPlaying = false;
+      function onMouseMove(event) 
+      {
+        for (var i = 0; i < strings.length; i++)
+        {
+            var range = Math.abs(event.point.x - strings[i].segments[0].point.x);
+            var lowY = strings[i].segments[0].point.y;
+            var highY = strings[i].lastSegment.point.y;
+
+            if (range < 40 && event.point.y >= lowY && event.point.y <= highY)
+            {
+                if (strings[i].segments.length > 2)
+                {
+                    strings[i].removeSegment(1);
+                }
+                strings[i].insert(1, new Point(event.point.x, event.point.y));
+                strings[i].smooth();
+                if (widget && !musicPlaying)
+                {
+                    widget.play();
+                    musicPlaying = true;
+                }
+            }
+        }
+      }
+
+
+      function onFrame(event)
+      {
+        var stringsMoving = false;
+        for (var i = 0; i < strings.length; i++)
+        {
+          if (strings[i].segments.length > 2)
+          {
+              stringsMoving = true;
+              var destination = new Point(strings[i].segments[0].point.x, (strings[i].segments[0].point.y+strings[i].segments[2].point.y)/2);
+              var vector = destination - strings[i].segments[1].point;
+              strings[i].segments[1].point += vector/12;
+
+              if(Math.abs(strings[i].segments[0].point.x - strings[i].segments[1].point.x) < 10)
+              {
+                strings[i].removeSegment(1);
+                strings[i].flatten(strings[i].segments[1].point.y - strings[i].segments[0].point.y);
+              }
+          }
+        }
+
+        if (stringsMoving == false) 
+        {
+          if (widget && musicPlaying)
+          {
+              widget.pause();
+              musicPlaying = false;
+          }
+        }
+      }
+    </script>
+</body>
+</html>

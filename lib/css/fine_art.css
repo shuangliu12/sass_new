@@ -1,0 +1,29 @@
+body {
+    background-color: #F4F4F4;
+}
+
+#artWork {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.row-centered {
+    max-width: 1000px;
+}
+
+#artWork img {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-right: -4px;
+}
+
+#artWork > div:not(:first-child) {
+    margin-top: 55px;
+    padding-top: 55px;
+    border-top: 1px solid #C8C8C8;
+}
+
+.padTop {
+    padding-top: 35px;
+}

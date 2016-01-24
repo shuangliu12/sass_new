@@ -1,0 +1,9 @@
+find track id
+http://stackoverflow.com/questions/18924693/soundcloud-how-do-i-know-the-sound-cloud-track-id-right-away-after-uploading-a
+
+- find track id as above
+- uncomment lines in DJ.html to get waveform_url
+- download waveform_url image
+- copy image to C:\Users\Brendan\workspace\ImageDj\src
+- open project in eclipse
+- go to C:\Users\Brendan\workspace\ImageDj to get array from volumes.txt

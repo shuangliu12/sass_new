@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0;}
+
+#headerArea {
+    height:45px;
+    background-color:#706C83;
+    color:white;
+}
+
+#headerArea a {
+    line-height:45px;
+    text-decoration:none;
+    color:inherit;
+    margin-left:1.5em;
+}
+
+#headerArea p {
+    display: inline;
+}
+

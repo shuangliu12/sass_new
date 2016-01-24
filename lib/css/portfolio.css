@@ -1,0 +1,40 @@
+#main {
+    padding: 50px;
+}
+
+span {
+    display: block;
+}
+
+.applicationTitle {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/*.applicationTitle:not(:first-child) {
+    margin-top: 55px;
+    padding-top: 55px;
+    border-top: 1px solid #C8C8C8;
+}*/
+
+img {
+    width: 100%;
+}
+
+.imageDescription {
+    margin-top: 35px;
+}
+
+.horizontal {
+    margin-top: 55px;
+    border-top: 1px solid #C8C8C8;
+    display: block;
+    clear: left;
+}
+
+.gameImage {
+	width: 50%;
+}
+.lunchImage {
+    width: 75%;
+}
