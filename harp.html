@@ -21,7 +21,7 @@
     <p><a href="fine_art.html">Fine Art</a></p>
     <p><a href="digital_art.html">Digital Art</a></p>
   </div>
-  <canvas id="myCanvas", style="height:500px;width:100%;"></canvas>
+  <canvas id="myCanvas", style="height:500px;width:100%; margin-top:70px;"></canvas>
   <p style="position:absolute;top:0;z-index:-100;">Hello</p>
   <iframe id="soundcloud_widget"
       src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/99774949&show_artwork=false&liking=false&sharing=false&auto_play=false"
@@ -54,7 +54,9 @@
       {
         harpWidth = canvasWidth * 0.8;
       }
-      var startPoint = new Point(harpWidth/4, 25);
+      var harpLeftX = (view.center.x - (harpWidth / 2));
+      // var startPoint = new Point(harpWidth/4, 25);
+      var startPoint = new Point(harpLeftX, 25);
       // these 2 segments create the top wavy line
       var firstSegment = new Segment(startPoint, null, handleOut);
       var secondPoint = new Point(startPoint.x + harpWidth, startPoint.y + harpWidth/20);

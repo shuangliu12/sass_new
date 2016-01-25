@@ -1,5 +1,7 @@
 #main {
-    padding: 50px;
+    padding-top: 75px;
+    width: 75%;
+    margin: 0 auto;
 }
 
 span {
@@ -9,12 +11,12 @@ span {
 .applicationTitle {
     font-weight: bold;
     padding-bottom: 10px;
+    color: #706C83;
+    font-size: 1.8em;
+    text-decoration: none;
 }
-
-/*.applicationTitle:not(:first-child) {
-    margin-top: 55px;
-    padding-top: 55px;
-    border-top: 1px solid #C8C8C8;
+/*.applicationTitle > a:hover {
+  color: #2F1998;
 }*/
 
 img {
@@ -23,6 +25,9 @@ img {
 
 .imageDescription {
     margin-top: 35px;
+    color: #595769;
+    font-size: 1.2em;
+    font-family: Arial;
 }
 
 .horizontal {
@@ -36,5 +41,16 @@ img {
 	width: 50%;
 }
 .lunchImage {
-    width: 75%;
+    width: 100%;
 }
+.problem {
+  font-size: 1.2em;
+  color: #595769;
+  margin-top: 10px;
+  font-family: Calibri;
+}
+iframe {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
