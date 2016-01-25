@@ -56,7 +56,11 @@ a {
     cursor: pointer;
 }
 
-/*.subMenu {
-    display: none;
-    font-size: 1em;
-}*/
+h3 {
+    font-weight: bold;
+    font-family: Andale Mono;
+}
+
+.subMenu {
+    font-family: Andale Mono;
+}

@@ -1,11 +1,12 @@
 #main {
     padding-top: 70px;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
 .column {
-    width: 33%;
+    margin-top: 10%;
+    width: 30%;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
@@ -32,6 +33,10 @@ img {
 
 .applicationTitle > a:hover {
     color: #2F1998;
+}
+
+#birdThumbnail {
+    border: 2px solid black;
 }
 
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chartype="utf-8">
+    <link rel="icon" href="lib/img/favicon.ico">
+    <title>Shuang Liu</title>
+    <meta name="description" content="Welcome to shuangliudesign">
+    <meta name="keywords" content="shuang liu">
+    <link rel="stylesheet" type="text/css" href="lib/css/header.css">
+
+    <script type="text/javascript" src="lib/js/paper-full.min.js"></script>
+</head>
+<body>
+  <div id="headerArea">
+    <p><a href="index.html">Home</a></p>
+    <p><a href="web_design.html">Web Design</a></p>
+    <p><a href="bulls_and_cows.html">Mobile Design</a></p>
+    <p><a href="fine_art.html">Fine Art</a></p>
+    <p><a href="digital_art.html">Digital Art</a></p>
+  </div>
+
+  <canvas id="birdCanvas" resize, style="width:100%;margin-top:45px;"></canvas>
+  <img id="birdImage" src="lib/img/birdTransparent.png" style="display: none">
+
+  <script type="text/paperscript" canvas="birdCanvas">
+      var pathY = view.size.height * 0.55;
+      var destination = new Point(0, pathY);
+      var midpoint;
+
+      //place the birds
+      var bird1 = new Raster('birdImage');
+      bird1.position = [-50, -50];
+      bird1.scale(0.4);
+      bird1.rotate(20);
+      var bird2 = new Raster('birdImage');
+      bird2.position = [-50, -50];
+      bird2.scale(0.3);
+      bird2.rotate(30);
+
+      //draw the line
+      var path = new Path({
+        strokeColor: 'black',
+        strokeWidth: 2,
+      });
+      path.add(new Point(0, pathY), new Point(view.size.width, pathY));
+
+      function onMouseMove(event) 
+      {
+        var range = event.point.y - pathY;
+        if (range < 120 && range > -120)
+        {
+          if (path.segments.length > 2)
+          {
+            path.removeSegment(1);
+          }
+
+          path.insert(1, new Point(event.point.x, event.point.y));
+          path.smooth();
+
+          destination.x = event.point.x;
+          midpoint = path.segments[1].point;
+        }
+      }
+
+      function onFrame(event)
+      {
+          if (path.segments.length > 2)
+          {
+              var bird1Destination = new Point(bird1.position.x + 100, -60);
+              var bird1Vector = bird1Destination - bird1.position;
+              bird1.position += bird1Vector/13;
+
+              var bird2Destination = new Point(bird2.position.x + 300, -60);
+              var bird2Vector = bird2Destination - bird2.position;
+              bird2.position += bird2Vector/18;
+
+              var vector = destination - midpoint;
+              path.segments[1].point += vector/30;
+
+              if(Math.abs(pathY - path.segments[1].point.y) < 10)
+              {
+                  path.removeSegment(1);
+                  path.flatten(view.size.width);
+              }
+          }
+          else
+          {
+            bird1.position = [100, pathY-33];
+            bird2.position = [250, pathY-24];
+          }
+      }
+
+      function onResize(event)
+      {
+        path.lastSegment.point.x = view.size.width;
+      }
+    </script>
+</body>
+</html>

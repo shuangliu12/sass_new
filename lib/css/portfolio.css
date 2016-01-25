@@ -22,17 +22,40 @@ span {
 img {
     width: 100%;
 }
-.problem {
-  margin-top: 10px;
-  font-size: 1.2em;
+
+.motivation {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
   color: #595769;
   font-family: Calibri;
 }
+
+.content_div {
+  margin-bottom: 20px;
+}
+
+.problem {
+  font-size: 1.2em;
+  color: #595769;
+  font-family: Calibri;
+  margin-bottom: 10px;
+}
+
+.imageDescriptionDiv {
+  margin-bottom: 20px;
+}
+
 .imageDescription {
     margin-top: 35px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #595769;
-    font-family: Arial;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.appImg {
+  margin-top: 15px;
 }
 
 .horizontal {
@@ -50,7 +73,27 @@ img {
 }
 
 iframe {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
+
+.app_link {
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  background-color: #595769;
+  color: white;
+  border:1px #595769 solid;
+  text-align: center;
+}
+
+.app_link:hover {
+  background-color: white;
+  color: #595769;
+}
+
+.google_play_icon {
+  width: 150px;
+  margin-top: 15px;
+}
+
 

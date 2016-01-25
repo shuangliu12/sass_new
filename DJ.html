@@ -41,7 +41,7 @@
         // to get the waveform image file
         // widget.getSounds(function(sounds) {
         //   console.log(sounds[0].waveform_url);
-        // });       
+        // });
     });
     function clickPlayButton()
     {
@@ -94,7 +94,7 @@
       var stars, starScaleFactor;
       stars = [];
       starScaleFactor = [];
-      for(var i = 0; i < numStars; i++) 
+      for(var i = 0; i < numStars; i++)
       {
         var p = new Point(view.size.width, view.size.height/2) * Point.random() + [0,view.size.height+30];
         stars.push(new Path.Star(p, 5, starRad, starRad*starRadFactor));
@@ -110,7 +110,7 @@
       function onFrame(event)
       {
 
-        if(soundCloudPlaying) 
+        if(soundCloudPlaying)
         {
             for (var i = 0; i < amount; i++)
             {
@@ -125,9 +125,9 @@
               // hue is out of 360 degrees. sound is represented up to 140 so multiply to get full range
               starHue = currentVolume * (360 / maxVolume);
             }
-            for(var i = 0; i < numStars; i++) 
+            for(var i = 0; i < numStars; i++)
             {
-                if(stars[i].position.y < -75 || stars[i].position.y > view.size.height+100) 
+                if(stars[i].position.y < -75 || stars[i].position.y > view.size.height+100)
                 {
                   // the star went off of the screen, reset it with a new star at the bottom
                   stars[i].remove();
@@ -136,7 +136,7 @@
                   stars[i].fillColor = 'green';
                   starScaleFactor[i] = getRandomStarScaleFactor();
                 }
-                else 
+                else
                 {
                   // move the star and update the color based on the music
                   var s = stars[i].position;
@@ -153,10 +153,10 @@
                 stars[i].scale(starScaleFactor[i]);
             }
         }
-        else 
+        else
         {
             // the music is paused, so slowly hide the stars
-            for(var i = 0; i < numStars; i++) 
+            for(var i = 0; i < numStars; i++)
             {
               var op = stars[i].opacity;
               if(op > 0.02)
