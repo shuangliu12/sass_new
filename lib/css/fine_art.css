@@ -18,6 +18,12 @@ body {
     margin-right: -4px;
 }
 
+#artWork p {
+    font-size: 1.2em;
+    color: #595769;
+    font-family: Arial;
+}
+
 #artWork > div:not(:first-child) {
     margin-top: 55px;
     padding-top: 55px;

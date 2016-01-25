@@ -22,11 +22,16 @@ span {
 img {
     width: 100%;
 }
-
+.problem {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #595769;
+  font-family: Calibri;
+}
 .imageDescription {
     margin-top: 35px;
-    color: #595769;
     font-size: 1.2em;
+    color: #595769;
     font-family: Arial;
 }
 
@@ -43,12 +48,7 @@ img {
 .lunchImage {
     width: 100%;
 }
-.problem {
-  font-size: 1.2em;
-  color: #595769;
-  margin-top: 10px;
-  font-family: Calibri;
-}
+
 iframe {
   margin-top: 20px;
   margin-bottom: 20px;
