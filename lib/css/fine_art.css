@@ -21,7 +21,7 @@ body {
 #artWork p {
     font-size: 1.2em;
     color: #595769;
-    font-family: Arial;
+    font-family: Calibri;
 }
 
 #artWork > div:not(:first-child) {
