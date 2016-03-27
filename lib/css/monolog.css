@@ -1,0 +1,12 @@
+.storyboard_box {
+  /*border: 2px solid black;*/
+  width: 20%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  float: none;
+}
+
+.storyboad_description {
+  text-align: left;
+}
