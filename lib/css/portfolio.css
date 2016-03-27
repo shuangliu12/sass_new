@@ -27,6 +27,15 @@ img {
   border: 2px solid black;
 }
 
+.storyboard > div {
+  padding: 0px;
+}
+
+.storyboard span {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
 .motivation {
   margin-top: 20px;
   font-size: 1.5em;
