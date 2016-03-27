@@ -23,6 +23,10 @@ img {
     width: 100%;
 }
 
+.storyboard img {
+  border: 2px solid black;
+}
+
 .motivation {
   margin-top: 20px;
   font-size: 1.5em;
