@@ -6,6 +6,7 @@
 		<title>Shuang Liu</title>
 		<meta name="description" content="Welcome to shuangliudesign">
 		<meta name="keywords" content="shuang liu">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="lib/css/meet_and_lunch.css">
 		<link rel="stylesheet" type="text/css" href="lib/css/portfolio.css">
 		<link rel="stylesheet" type="text/css" href="lib/css/header.css">
@@ -20,65 +21,154 @@
 	    <p><a href="digital_art.html">Digital Art</a></p>
 		</div>
 		<div id="main">
-			<span class="applicationTitle">MEET AND LUNCH</span>
-
-			<div class='content_div'>
-				<span class='section_title'>Problem Space</span>
-				<span class='description'>
-					Networking plays an every important role in career. Many people work in a company-concentrated areas but lack of a opportunity to get to know others who work in same industry. Traditionally, people build networks through alumni network, Meetup, LinkedIn or friends. It is hard to build personal connections through these mediums. People want an easier way to meet other professionals and build connections.
-				</span>
+			<div class="row">
+				<span class="applicationTitle">MEET AND LUNCH</span>
 			</div>
 
-			<div class='content_div'>
-				<h5 class="section_title">User Research</h5>
-				<span class='description'>
-					I interviewed five target users about their work and life.
-				</span>
-			</div>
-
-			<div class='content_div'>
-				<h5 class="section_title">Ideation</h5>
-				<span class='description'>
-					I interviewed five target users about their work and life. I learned that LinkedIn, Meetup and friends are the main medium for networking. Lunch sharing seems like a good idea.
-				</span>
-				<div>
-			</div>
-
-			<div class='content_div'>
-				<h5 class="section_title">Current Social</h5>
-				<span class='description'>
-					I interviewed five target users about their work and life. I learned that LinkedIn, Meetup and friends are the main medium for networking. Lunch sharing seems like a good idea.
-				</span>
-				<div>
-			</div>
-
-			<div class="horizontal"></div>
-			<div class="lunchImage">
-				<div class='imageDescriptionDiv'>
-					<span class="imageDescription">Landing Page</span>
-					<span class='problem'>Both Chefs and Food-seekers can sign up or log in.</span>
-					<span class='problem'>Food-seekers can search for nearby kitchens by location.</span>
-				</div>
-				<img class='appImg' src="lib/img/lunchLanding.png" alt="Landing Page">
-			</div>
-
-			<div class="horizontal"></div>
-			<div class="lunchImage">
-				<div class='imageDescriptionDiv'>
-					<span class="imageDescription">Kitchen Page</span>
-					<span class='problem'>The kitchen page displays an info section with a short description, address and overall rating of the kitchen. The lunch menu displays meals. The review section shows the most recent reviews from Food-seekers.</span>
-					<span class='problem'>The Chef of this kitchen is able to edit info on the page.</span>
-					<img class='appImg' src="lib/img/lunchKitchen.png" alt="Kitchen Page">
+			<div class="row">
+				<div class='content_div'>
+					<span class='section_title'>Problem Space</span>
+					<span class='description'>
+						Networking plays an every important role in career. Many people work in a company-concentrated areas but lack of a opportunity to get to know others who work in same industry. Traditionally, people build networks through alumni network, Meetup, LinkedIn or friends. It is hard to build personal connections through these mediums. People want an easier way to meet other professionals and build connections.
+					</span>
 				</div>
 			</div>
 
-			<div class="horizontal"></div>
-			<div class="lunchImage">
-				<div class='imageDescriptionDiv'>
-					<span class="imageDescription">Profile Page</span>
-					<span class='problem'>The profile page shows a short description of the user and a link to the kitchen page (if the user is a Chef). Since users can be both Chefs and Food-seekers, this page shows the review, order and meal histories of this user. The owner of the page can edit their profile photo and self-introduction on this page.</span>
-					<img class='appImg' src="lib/img/lunchChef.png" alt="Chef's Profile Page">
+			<div class="row">
+				<div class='content_div'>
+					<h5 class="section_title">User Research</h5>
+					<span class='description'>
+						I interviewed five target users in person. I asked interviewees about their work and life to gain insights about their lifestyles and their ways of social networking. I identified LinkedIn, Meetup and friends are the main ways to meet new people.
+					</span>
+
+					<div class='content_div'>
+						<div class='col-xs-2'>
+							<img src="lib/img/linkedin.jpeg" alt="s1">
+						</div>
+						<div class='col-xs-2'>
+							<ul class='network'>
+								<li class='pro'> Offer background information</li>
+								<li class='pro'> Can connect to targeted people</li>
+								<li class='con'> Low response rate</li>
+								<li class='con'> Too formal, hard to make friends</li>
+							</ul>
+						</div>
+
+						<div class='col-xs-2'>
+							<img src="lib/img/meetup.png" alt="s1">
+						</div>
+						<div class='col-xs-2'>
+							<ul class='network'>
+								<li class='pro'>Easy access to events</li>
+								<li class='pro'>Can join different groups</li>
+								<li class='con'>Don't know people's backgrounds</li>
+								<li class='con'>Too many people per event, hard to bond</li>
+								<li class='con'>Little control of time and location</li>
+							</ul>
+						</div>
+
+						<div class='col-xs-2'>
+							<img src="lib/img/friends.png" alt="s1">
+						</div>
+						<div class='col-xs-2'>
+							<ul class='network'>
+								<li class='pro'>Quality hangouts</li>
+								<li class='pro'>Likely to bond</li>
+								<li class='con'>Limited choices</li>
+							</ul>
+						</div>
+					</div>
 				</div>
+			</div>
+
+			<div class="row">
+				<div class='content_div'>
+					<h5 class="section_title">Ideation</h5>
+					<span class='description'>
+						During the interview, I learned some interviewees hang out with co-workers during lunch time while others have lunch alone. People often buy lunch from places near work, but the choices are very limited and food is usually unhealthy and insipid. People(Chef) who love to cook can cook extra lunch portions and post them meals on Meet & Lunch. Foodies can order a homemade lunch from Meet&Lunch. Lunch sharing is a natural way to meet other nearby professionals. Homemade food brings people together.
+					</span>
+				</div>
+					<h4 class='sub_title'>Personas</h6>
+					<div class='row'>
+						<div class="col-xs-2">
+							<img src="lib/img/seamus.png" alt="Seamus">
+							<h4>Seamus K.</h4>
+						</div>
+						<div class="col-xs-4">
+							<ul class='persona_des'>
+								<li>I am a Data Scientist working in Cambridge. </li>
+								<li>I don't know how to cook. I buy lunch at work everyday. I am tired of the limite choices around work.</li>
+								<li>I love to meet new people but I feel shy at group events.</li>
+								<li>I have a busy schedule. </li>
+							</ul>
+						</div>
+						<div class="col-xs-2">
+							<img src="lib/img/sofie.png" alt="Seamus">
+							<h4>Sofie F.</h4>
+						</div>
+						<div class="col-xs-4">
+							<ul class='persona_des'>
+								<li>I am a graphic designer working in Cambridge. </li>
+								<li>I live alone. I love to cook, but I can eat very little.</li>
+								<li>I am new to Boston and I want to meet new people.</li>
+								<li>I have a busy schedule.</li>
+								<li>I don't have a car. I feel hard to commute to events.</li>
+							</ul>
+						</div>
+					</div>
+
+					<h4 class='sub_title'>Use Cases</h4>
+
+						<h5>User Case 1</h5>
+						<p>PROBLEM: Sofie wants to get a new job. She has been sending out emails but receives very few responses. Sofie wants to meet with other graphic designers to learn more about the job martket in Boston, but she does not have any friends or connections here.</p>
+						<p>SOLUTION: Sofie used Meet and Lunch and searched for chefs in her working area. Sofie found Chef Lisa is a senior graphic designer. Sofie ordered a lunch from Lisa and had lunch with Lisa. Sofie had a great time chatting with Lisa and Lisa offered to refer Sofie to Lisa's company.</p>
+
+						<h5>Use case 2</h5>
+						<p>PROBLEM: Sofie wants to get a new job. She has been sending out emails but receives very few responses. Sofie wants to meet with other graphic designers to learn more about the job martket in Boston, but she does not have any friends or connections here.</p>
+						<p>SOLUTION: Sofie used Meet and Lunch and searched for chefs in her working area. Sofie found Chef Lisa is a senior graphic designer. Sofie ordered a lunch from Lisa and had lunch with Lisa. Sofie had a great time chatting with Lisa and Lisa offered to refer Sofie to Lisa's company.</p>
+
+			</div>
+
+			<div class="row">
+				<div class="content_div">
+					<span class="imageDescription">Low Fidelity Mockups</span>
+					<div class="col-xs-3">
+						<img src="lib/img/meet_and_lunch/low_landing.png" alt="Landing Page">
+					</div>
+					<div class="col-xs-3">
+						<img src="lib/img/meet_and_lunch/low_kitchen_menu.png" alt="Landing Page">
+					</div>
+					<div class="col-xs-3">
+						<img src="lib/img/meet_and_lunch/low_chef_profile.png" alt="Landing Page">
+					</div>
+					<div class="col-xs-3">
+						<img src="lib/img/meet_and_lunch/low_meal_organize.png" alt="Landing Page">
+					</div>
+				</div>
+
+				<div class="content_div">
+					<div class="col-xs-3">
+						<img src="lib/img/meet_and_lunch/low_lunch_date.png" alt="Landing Page">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="content_div">
+					<span class="imageDescription">High Fidelity Mockups</span>
+					<div class="col-xs-3 hi_fi_img">
+						<img src="lib/img/meet_and_lunch/landing.png" alt="landing Page">
+					</div>
+					<div class="col-xs-3 hi_fi_img">
+						<img src="lib/img/meet_and_lunch/order.png" alt="menu">
+					</div>
+					<div class="col-xs-3 hi_fi_img">
+						<img src="lib/img/meet_and_lunch/chef.png" alt="menu">
+					</div>
+				</div>
+			</div>
+
+
 			</div>
 		</div>
 	</body>
