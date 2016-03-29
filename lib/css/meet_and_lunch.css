@@ -1,3 +1,8 @@
+.applicationTitle {
+  color: black;
+  font-family: Marker felt;
+}
+
 .section_title {
   margin-top: 20px;
   margin-bottom: 5px;
@@ -15,7 +20,7 @@
 }
 
 .use_case_title {
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-family: Calibri;
   font-weight: bold;
 }
@@ -27,8 +32,17 @@
   margin-bottom: 10px;
 }
 
+.use_case_description {
+  font-size: 1.1em;
+  color: black;
+  font-family: Calibri;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
 .hi_fi_img img{
   border: 2px solid black;
+  margin-bottom: 10px;
 }
 
 .pro {
@@ -65,3 +79,4 @@ li.con:before {
   content: "-";
   margin-right: 4px;
 }
+
