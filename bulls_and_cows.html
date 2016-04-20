@@ -11,39 +11,67 @@
 	</head>
 
 	<body>
-		<div id="headerArea">
-			<p><a href="index.html">Home</a></p>
-			<p><a href="web_design.html">Web Design</a></p>
-	    <p><a href="#">Mobile Design</a></p>
-	    <p><a href="fine_art.html">Fine Art</a></p>
-	    <p><a href="digital_art.html">Digital Art</a></p>
-		</div>
-		<div id="main">
-			<span class="applicationTitle">BULLS AND COWS</span>
-			<span class='problem'>Bulls and cows is a classic code-breaking game.</span>
-			<span class='problem'>The AI has a secret 4-digit number. Each round, the user is given the number of bulls (right number right location) and cows (correct number in wrong location). For example, if the answer is 1234 and the user guesses 4321, they would see 4 cows. A guess of 1289 would result in 2 bulls and 0 cows.</span>
-			<span class='problem'> My responsbilities: UX/UI design, typography, abstract drawing of bulls and cows, original game logic and AI programming (Python)</span>
-			<div class='content_div'>
-				<h5 class="motivation"> Three Modes </h5>
-				<span class='problem'>Solo: The user guesses the number from the AI.</span>
-				<span class='problem'>VS: The user and AI take turns guessing each other's number to see who wins first.</span>
-				<span class='problem'>AI: It's the AI's turn to guess the user's number.</span>
+		<div class = "row">
+			<div class="col-md-3 left">
+				<div class = "sideMenu">
+					<h1 class='shuangliu'><a href="index.html">Shuang Liu</a></h1>
+					<h2 class= 'contents'>Contents</h2>
+					<hr>
+					<h3><span class="number">1</span> Applications</h3>
+					<ul class="contents_list">
+						<li class='current_page'><a href="meet_and_lunch.html">Meet and Lunch</a></li>
+						<li><a href="mytopia.html">Mytopia</a></li>
+						<li><a href="monolog.html">Monolog</a></li>
+					</ul>
+					<h3><span class="number">2</span> Game Design</h3>
+					<ul class="contents_list">
+						<li><a href="bulls_and_cows.html">Bulls and Cows</a></li>
+					</ul>
+					<h3><span class="number">3</span> Digital Arts</h3>
+					<ul class="contents_list">
+						<li><a href="">Performing</a></li>
+						<li><a href="harp.html">Play the Harp</a></li>
+						<li><a href="DJ.html">DJ it Up</a></li>
+						<li><a href="bird.html">Don't Startle the Birds</a></li>
+					</ul>
+					<h3><span class="number">4</span> Arts</h3>
+					<ul class="contents_list">
+						<li><a href="fine_art.html">Paintings & Drawings</a></li>
+						<li><a href="#"></a>Illustration</li>
+					</ul>
+				</div>
 			</div>
 
-			<a href="https://play.google.com/store/apps/details?id=com.bullscows.brendanshuang.game.android&hl=en"><img class='google_play_icon' src="lib/img/google_play.png" alt='google play store'></a>
+			<div class = "col-md-9 right">
+				<div id="main">
+					<span class="applicationTitle">BULLS AND COWS</span>
+					<span class='problem'>Bulls and cows is a classic code-breaking game.</span>
+					<span class='problem'>The AI has a secret 4-digit number. Each round, the user is given the number of bulls (right number right location) and cows (correct number in wrong location). For example, if the answer is 1234 and the user guesses 4321, they would see 4 cows. A guess of 1289 would result in 2 bulls and 0 cows.</span>
+					<span class='problem'> My responsbilities: UX/UI design, typography, abstract drawing of bulls and cows, original game logic and AI programming (Python)</span>
+					<div class='content_div'>
+						<h5 class="motivation"> Three Modes </h5>
+						<span class='problem'>Solo: The user guesses the number from the AI.</span>
+						<span class='problem'>VS: The user and AI take turns guessing each other's number to see who wins first.</span>
+						<span class='problem'>AI: It's the AI's turn to guess the user's number.</span>
+					</div>
 
-			<div class="gameImage">
-				<span class="imageDescription">Solo Mode</span>
-				<img src="lib/img/BullSolo.png" alt="Landing Page">
+					<a href="https://play.google.com/store/apps/details?id=com.bullscows.brendanshuang.game.android&hl=en"><img class='google_play_icon' src="lib/img/google_play.png" alt='google play store'></a>
+
+					<div class="gameImage">
+						<span class="imageDescription">Solo Mode</span>
+						<img src="lib/img/BullSolo.png" alt="Landing Page">
+					</div>
+					<div class="gameImage">
+						<span class="imageDescription">AI Mode</span>
+						<img src="lib/img/BullAi.png" alt="Kitchen Page">
+					</div>
+					<div class="gameImage">
+						<span class="imageDescription">VS Mode</span>
+						<img src="lib/img/BullVs.png" alt="Chef's Profile Page">
+					</div>
+				</div>
 			</div>
-			<div class="gameImage">
-				<span class="imageDescription">AI Mode</span>
-				<img src="lib/img/BullAi.png" alt="Kitchen Page">
-			</div>
-			<div class="gameImage">
-				<span class="imageDescription">VS Mode</span>
-				<img src="lib/img/BullVs.png" alt="Chef's Profile Page">
-			</div>
+
 		</div>
 	</body>
 </html>

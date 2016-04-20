@@ -12,26 +12,50 @@
 	</head>
 
 	<body>
-		<div id="headerArea">
-			<p><a href="index.html">Home</a></p>
-			<p><a href="web_design.html">Web Design</a></p>
-	    <p><a href="bulls_and_cows.html">Mobile Design</a></p>
-	    <p><a href="fine_art.html">Fine Art</a></p>
-	    <p><a href="digital_art.html">Digital Art</a></p>
-		</div>
-		<div id="main">
-			<div class="row">
-				<span class="applicationTitle">MONOLOG</span>
-				<span class='problem'>A Ruby on Sinatra web application for mood tracking and expressive writing. </span>
-				<div class='content_div'>
-					<span class='motivation'>Motivation</span>
-					<span class='problem'>
-						During my two year career as a mental health social worker, I found people in need of clinical services often reported a lack of support outside of counseling sessions. Inspired by Dr. James Pennebaker's <i>Writing to Heal</i> (2004), I created Monolog to offer support for people with mood disorders. Monolog gives people a private place to write about their emotionally challenging experiences and keep track of their emotional upheavals. Expressive writing facilitates healing.
-					</span>
+			<div class = "row">
+				<div class="col-md-3 left">
+					<div class = "sideMenu">
+						<h1 class='shuangliu'><a href="index.html">Shuang Liu</a></h1>
+						<h2 class= 'contents'>Contents</h2>
+						<hr>
+						<h3><span class="number">1</span> Applications</h3>
+						<ul class="contents_list">
+							<li class='current_page'><a href="meet_and_lunch.html">Meet and Lunch</a></li>
+							<li><a href="mytopia.html">Mytopia</a></li>
+							<li><a href="monolog.html">Monolog</a></li>
+						</ul>
+						<h3><span class="number">2</span> Game Design</h3>
+						<ul class="contents_list">
+							<li><a href="bulls_and_cows.html">Bulls and Cows</a></li>
+						</ul>
+						<h3><span class="number">3</span> Digital Arts</h3>
+						<ul class="contents_list">
+							<li><a href="">Performing</a></li>
+							<li><a href="harp.html">Play the Harp</a></li>
+							<li><a href="DJ.html">DJ it Up</a></li>
+							<li><a href="bird.html">Don't Startle the Birds</a></li>
+						</ul>
+						<h3><span class="number">4</span> Arts</h3>
+						<ul class="contents_list">
+							<li><a href="fine_art.html">Paintings & Drawings</a></li>
+							<li><a href="#"></a>Illustration</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row storyboard">
+			<div class = "col-md-9 right">
+<!-- 				<div class = "row"> -->
+					<span class="applicationTitle">MONOLOG</span>
+					<span class='problem'>A Ruby on Sinatra web application for mood tracking and expressive writing. </span>
+					<div class='content_div'>
+						<span class='motivation'>Problem Space</span>
+						<span class='problem'>
+							During my two year career as a mental health social worker, I found people in need of clinical services often reported a lack of support outside of counseling sessions. People can only schedule one or two counseling sessions per week to talk with their problems with a therapist. Inspired by Dr. James Pennebaker's <i>Writing to Heal</i> (2004), I created Monolog to offer support for people with mood disorders. Monolog gives people a private place to write about their emotionally challenging experiences and keep track of their emotional upheavals. Expressive writing facilitates healing.
+						</span>
+					</div>
+				<!-- </div> -->
+
+			<div class="storyboard">
 				<div class="motivation">Storyboard</div>
 				<div class='col-xs-3'>
 					<img src="lib/img/monolog/s1.jpg" alt="s1">
@@ -51,14 +75,12 @@
 				</div>
 			</div>
 
-			<div class="row">
 				<div class="lunchImage">
 					<span class="imageDescription">Mood Recording Page</span>
 					<span class='problem'>Input Box: Users can write about their feelings in the box. After they finish writing, they can click either the 'positive' or 'negative' button to record their feelings associated with this entry.</span>
 					<span class='problem'>Entry List: Users can view all of their entries, with the latest on top.</span>
 					<span class='problem'>Good Moments Button: Users can click this button to view only the good memories in their lives. Sometimes, people immerse themselves in the bad experiences. This function is designed to remind them of good memories.</span>
 					<img class='appImg' src="lib/img/monologRecording.png" alt="Landing Page">
-				</div>
 				<div class="horizontal"></div>
 				<div class="lunchImage">
 					<span class="imageDescription">Mood Analysis Page</span>
