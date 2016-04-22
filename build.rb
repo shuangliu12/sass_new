@@ -7,7 +7,7 @@ def getBuildFiles(directory)
 			buildFile = File.open(filepath, "rb")
 			buildFileContents = buildFile.readlines
 			buildFileContents.map! { |element|
-			   element.strip
+			   element.gsub(/\r\n?/,"")
 			}
 			# key is everything after final slash
 			key = filepath.split('/')[-1]
