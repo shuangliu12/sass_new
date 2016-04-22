@@ -15,7 +15,7 @@
 .sideMenu {
     font-family: Calibri;
     margin-left: 40px;
-    position: fixed;
+    /*position: fixed;*/
 }
 
 .contents_list li{
@@ -33,7 +33,7 @@
     font-size:2em;
 }
 
-.current_page {
+.meetAndLunch .meetAndLunch, .mytopia .mytopia, .monolog .monolog, .bullsAndCows .bullsAndCows, .performing .performing, .harpPop .harpPop, .djItUp .djItUp, .birdPage .birdPage, .fineArt .fineArt, .illustrations .illustrations {
     text-decoration: underline;
 }
 
