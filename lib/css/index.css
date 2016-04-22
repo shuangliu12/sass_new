@@ -1,7 +1,34 @@
 #myCanvas {
-    width:50%;
+    width:100%;
     height:100%;
     border-right: black 1px solid;
+}
+
+
+.landingRight {
+  margin-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.numberTitle {
+  font-size: 4em;
+}
+
+.appName {
+  font-size: 1.5em;
+}
+
+img {
+  margin-bottom: 2em;
+  margin-right: 2em;
+    width: 100%;
+    float: left;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: black;
 }
 
 
