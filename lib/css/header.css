@@ -3,19 +3,38 @@
     text-decoration: none;
 }
 
-.left {
+body {
     background-color: white;
+}
+
+#main {
+    padding-top: 75px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.sideMenu {
+    font-family: Calibri;
+    position: fixed;
+}
+
+@media (max-width: 768px) {
+    .sideMenu {
+        position: static;
+    }
+}
+
+.right {
+    background-color: #f7f2ec;
+}
+
+.meetAndLunch .meetAndLunch, .mytopia .mytopia, .monolog .monolog, .bullsAndCows .bullsAndCows, .performing .performing, .harpPop .harpPop, .djItUp .djItUp, .birdPage .birdPage, .fineArt .fineArt, .illustrations .illustrations {
+    text-decoration: underline;
 }
 
 .contents {
     font-size: 2em;
     margin-bottom: -10px;
-}
-
-.sideMenu {
-    font-family: Calibri;
-    margin-left: 40px;
-    /*position: fixed;*/
 }
 
 .contents_list li{
@@ -33,12 +52,6 @@
     font-size:2em;
 }
 
-.meetAndLunch .meetAndLunch, .mytopia .mytopia, .monolog .monolog, .bullsAndCows .bullsAndCows, .performing .performing, .harpPop .harpPop, .djItUp .djItUp, .birdPage .birdPage, .fineArt .fineArt, .illustrations .illustrations {
-    text-decoration: underline;
-}
 
-.right {
-    background-color: #f7f2ec;
-}
 
 
