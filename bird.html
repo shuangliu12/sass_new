@@ -1,99 +1,136 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta chartype="utf-8">
-    <link rel="icon" href="lib/img/favicon.ico">
-    <title>Shuang Liu</title>
-    <meta name="description" content="Welcome to shuangliudesign">
-    <meta name="keywords" content="shuang liu">
-    <link rel="stylesheet" type="text/css" href="lib/css/header.css">
-
+  <head>
+    <!-- head.build.html -->
+		<meta chartype="utf-8">
+		<link rel="icon" href="lib/img/favicon.ico">
+		<title>Shuang Liu</title>
+		<meta name="description" content="Welcome to shuangliudesign">
+		<meta name="keywords" content="shuang liu">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="lib/css/header.css">
+    <!-- head.build.html -->
     <script type="text/javascript" src="lib/js/paper-full.min.js"></script>
-</head>
-<body>
-  <div id="headerArea">
-    <p><a href="index.html">Home</a></p>
-    <p><a href="web_design.html">Web Design</a></p>
-    <p><a href="bulls_and_cows.html">Mobile Design</a></p>
-    <p><a href="fine_art.html">Fine Art</a></p>
-    <p><a href="digital_art.html">Digital Art</a></p>
-  </div>
+  </head>
 
-  <canvas id="birdCanvas" resize, style="width:100%;margin-top:45px;"></canvas>
-  <img id="birdImage" src="lib/img/birdTransparent.png" style="display: none">
+  <body class="birdPage">
+    <!-- menu.build.html -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="center">
+						<div class="sideMenu">
+							<h1 class='shuangliu'><a href="index.html">Shuang Liu</a></h1>
+							<h2 class='contents'>Contents</h2>
+							<hr>
+							<h3><span class="number">1</span> Applications</h3>
+							<ul class="contents_list">
+								<li class='meetAndLunch'><a href="meet_and_lunch.html">Meet and Lunch</a></li>
+								<li class='mytopia'><a href="mytopia.html">Mytopia</a></li>
+								<li class='monolog'><a href="monolog.html">Monolog</a></li>
+							</ul>
+							<h3><span class="number">2</span> Game Design</h3>
+							<ul class="contents_list">
+								<li class='bullsAndCows'><a href="bulls_and_cows.html">Bulls and Cows</a></li>
+							</ul>
+							<h3><span class="number">3</span> Digital Arts</h3>
+							<ul class="contents_list">
+								<li class='performing'><a href="">Performing</a></li>
+								<li class='harpPop'><a href="harp.html">Play the Harp</a></li>
+								<li class='djItUp'><a href="DJ.html">DJ it Up</a></li>
+								<li class='birdPage'><a href="bird.html">Don't Startle the Birds</a></li>
+							</ul>
+							<h3><span class="number">4</span> Arts</h3>
+							<ul class="contents_list">
+								<li class='fineArt'><a href="fine_art.html">Paintings & Drawings</a></li>
+								<li class='illustrations'><a href="#">Illustrations</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-  <script type="text/paperscript" canvas="birdCanvas">
-      var pathY = view.size.height * 0.55;
-      var destination = new Point(0, pathY);
-      var midpoint;
+				<div class="col-sm-9 right">
+					<div id="main">
+          <!-- menu.build.html -->
+            <canvas id="birdCanvas" resize, style="width:100%;margin-top:45px;"></canvas>
+            <img id="birdImage" src="lib/img/birdTransparent.png" style="display: none">
+          </div>
+        </div>
+      </div>
+    </div>
 
-      //place the birds
-      var bird1 = new Raster('birdImage');
-      bird1.position = [-50, -50];
-      bird1.scale(0.4);
-      bird1.rotate(20);
-      var bird2 = new Raster('birdImage');
-      bird2.position = [-50, -50];
-      bird2.scale(0.3);
-      bird2.rotate(30);
+    <script type="text/paperscript" canvas="birdCanvas">
+        var pathY = view.size.height * 0.55;
+        var destination = new Point(0, pathY);
+        var midpoint;
 
-      //draw the line
-      var path = new Path({
-        strokeColor: 'black',
-        strokeWidth: 2,
-      });
-      path.add(new Point(0, pathY), new Point(view.size.width, pathY));
+        //place the birds
+        var bird1 = new Raster('birdImage');
+        bird1.position = [-50, -50];
+        bird1.scale(0.4);
+        bird1.rotate(20);
+        var bird2 = new Raster('birdImage');
+        bird2.position = [-50, -50];
+        bird2.scale(0.3);
+        bird2.rotate(30);
 
-      function onMouseMove(event) 
-      {
-        var range = event.point.y - pathY;
-        if (range < 120 && range > -120)
+        //draw the line
+        var path = new Path({
+          strokeColor: 'black',
+          strokeWidth: 2,
+        });
+        path.add(new Point(0, pathY), new Point(view.size.width, pathY));
+
+        function onMouseMove(event) 
         {
-          if (path.segments.length > 2)
+          var range = event.point.y - pathY;
+          if (range < 120 && range > -120)
           {
-            path.removeSegment(1);
+            if (path.segments.length > 2)
+            {
+              path.removeSegment(1);
+            }
+
+            path.insert(1, new Point(event.point.x, event.point.y));
+            path.smooth();
+
+            destination.x = event.point.x;
+            midpoint = path.segments[1].point;
           }
-
-          path.insert(1, new Point(event.point.x, event.point.y));
-          path.smooth();
-
-          destination.x = event.point.x;
-          midpoint = path.segments[1].point;
         }
-      }
 
-      function onFrame(event)
-      {
-          if (path.segments.length > 2)
-          {
-              var bird1Destination = new Point(bird1.position.x + 100, -60);
-              var bird1Vector = bird1Destination - bird1.position;
-              bird1.position += bird1Vector/13;
+        function onFrame(event)
+        {
+            if (path.segments.length > 2)
+            {
+                var bird1Destination = new Point(bird1.position.x + 100, -60);
+                var bird1Vector = bird1Destination - bird1.position;
+                bird1.position += bird1Vector/13;
 
-              var bird2Destination = new Point(bird2.position.x + 300, -60);
-              var bird2Vector = bird2Destination - bird2.position;
-              bird2.position += bird2Vector/18;
+                var bird2Destination = new Point(bird2.position.x + 300, -60);
+                var bird2Vector = bird2Destination - bird2.position;
+                bird2.position += bird2Vector/18;
 
-              var vector = destination - midpoint;
-              path.segments[1].point += vector/30;
+                var vector = destination - midpoint;
+                path.segments[1].point += vector/30;
 
-              if(Math.abs(pathY - path.segments[1].point.y) < 10)
-              {
-                  path.removeSegment(1);
-                  path.flatten(view.size.width);
-              }
-          }
-          else
-          {
-            bird1.position = [100, pathY-33];
-            bird2.position = [250, pathY-24];
-          }
-      }
+                if(Math.abs(pathY - path.segments[1].point.y) < 10)
+                {
+                    path.removeSegment(1);
+                    path.flatten(view.size.width);
+                }
+            }
+            else
+            {
+              bird1.position = [100, pathY-33];
+              bird2.position = [250, pathY-24];
+            }
+        }
 
-      function onResize(event)
-      {
-        path.lastSegment.point.x = view.size.width;
-      }
-    </script>
-</body>
+        function onResize(event)
+        {
+          path.lastSegment.point.x = view.size.width;
+        }
+      </script>
+  </body>
 </html>
