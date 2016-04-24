@@ -53,15 +53,16 @@
 				<div class="col-sm-9 right">
 					<div id="main">
           <!-- menu.build.html -->
-            <canvas id="myCanvas", style="height:500px;width:100%; margin-top:70px;"></canvas>
-            <p style="position:absolute;top:0;z-index:-100;">Hello</p>
-            <iframe id="soundcloud_widget"
-                src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/135298542&show_artwork=false&liking=false&sharing=false&auto_play=false"
-                width="42"
-                height="12"
-                frameborder="no"
-                style="position:absolute;top:0;z-index:-100;"
-                ></iframe>
+            <div class="mainCanvasDiv">
+              <canvas id="myCanvas", style="height:500px;width:100%; margin-top:70px;"></canvas>
+              <iframe id="soundcloud_widget"
+                  src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/135298542&show_artwork=false&liking=false&sharing=false&auto_play=false"
+                  width="42"
+                  height="12"
+                  frameborder="no"
+                  style="position:absolute;top:0;z-index:-100;"
+                  ></iframe>
+            </div>
           </div>
         </div>
       </div>

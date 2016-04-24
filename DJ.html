@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="lib/css/header.css">
     <!-- head.build.html -->
-    <link rel="stylesheet" type="text/css" href="lib/css/dj.css">
     <script type="text/javascript" src="lib/js/paper-full.min.js"></script>
     <script src="http://w.soundcloud.com/player/api.js"></script>
   </head>
@@ -53,16 +52,17 @@
 				<div class="col-sm-9 right">
 					<div id="main">
             <!-- menu.build.html -->
-            <canvas id="disc" resize, style="width:100%;margin-top:45px;"></canvas>
-            <button id="playMusicButton" type="button" onclick="clickPlayButton()" style="display: none;background-color: #db0e39; border: none; color: white; font-family: Calibri; font-weight: bold; padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px;position:absolute;top:45px;left:0;cursor:pointer">Play Music</button>
-
-            <iframe id="soundcloud_widget"
-                src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/237603952&show_artwork=false&liking=false&sharing=false&auto_play=false"
-                width="42"
-                height="12"
-                frameborder="no"
-                style="position:absolute;top:0;z-index:-100;"
-                ></iframe>
+            <div class="mainCanvasDiv">
+              <canvas id="disc" resize, style="width:100%;"></canvas>
+              <button id="playMusicButton" type="button" onclick="clickPlayButton()" style="display: none;background-color: #db0e39; border: none; color: white; font-family: Calibri; font-weight: bold; padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px;position:absolute;top:45px;left:0;cursor:pointer">Play Music</button>
+              <iframe id="soundcloud_widget"
+                  src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/237603952&show_artwork=false&liking=false&sharing=false&auto_play=false"
+                  width="42"
+                  height="12"
+                  frameborder="no"
+                  style="position:absolute;top:0;z-index:-100;"
+                  ></iframe>
+            </div>
           </div>
         </div>
       </div>
