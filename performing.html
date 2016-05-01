@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<!-- head.build.html -->
+  <head>
+    <!-- head.build.html -->
 		<meta chartype="utf-8">
 		<link rel="icon" href="lib/img/favicon.ico">
 		<title>Shuang Liu</title>
@@ -9,12 +9,12 @@
 		<meta name="keywords" content="shuang liu">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="lib/css/header.css">
-		<!-- head.build.html -->
-		<link rel="stylesheet" type="text/css" href="lib/css/portfolio.css">
-	</head>
+    <!-- head.build.html -->
+    <script type="text/javascript" src="lib/js/paper-full.min.js"></script>
+  </head>
 
-	<body class="bullsAndCows">
-		<!-- menu.build.html -->
+  <body class="performing">
+    <!-- menu.build.html -->
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-3">
@@ -51,34 +51,15 @@
 
 				<div class="col-sm-9 right">
 					<div id="main">
-					<!-- menu.build.html -->
-					<span class="applicationTitle">BULLS AND COWS</span>
-					<span class='problem'>Bulls and cows is a classic code-breaking game.</span>
-					<span class='problem'>The AI has a secret 4-digit number. Each round, the user is given the number of bulls (right number right location) and cows (correct number in wrong location). For example, if the answer is 1234 and the user guesses 4321, they would see 4 cows. A guess of 1289 would result in 2 bulls and 0 cows.</span>
-					<span class='problem'> My responsbilities: UX/UI design, typography, abstract drawing of bulls and cows, original game logic and AI programming (Python)</span>
-					<div class='content_div'>
-						<h5 class="motivation"> Three Modes </h5>
-						<span class='problem'>Solo: The user guesses the number from the AI.</span>
-						<span class='problem'>VS: The user and AI take turns guessing each other's number to see who wins first.</span>
-						<span class='problem'>AI: It's the AI's turn to guess the user's number.</span>
-					</div>
+          <!-- menu.build.html -->
+            <div class="mainCanvasDiv">
+              <canvas id="myCanvas" resize, style="width:100%;margin-top:45px;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-					<a href="https://play.google.com/store/apps/details?id=com.bullscows.brendanshuang.game.android&hl=en"><img class='google_play_icon' src="lib/img/google_play.png" alt='google play store'></a>
-
-					<div class="gameImage">
-						<span class="imageDescription">Solo Mode</span>
-						<img src="lib/img/BullSolo.png" alt="Landing Page">
-					</div>
-					<div class="gameImage">
-						<span class="imageDescription">AI Mode</span>
-						<img src="lib/img/BullAi.png" alt="Kitchen Page">
-					</div>
-					<div class="gameImage">
-						<span class="imageDescription">VS Mode</span>
-						<img src="lib/img/BullVs.png" alt="Chef's Profile Page">
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+    <script type="text/javascript" src="lib/js/mondrian.js"></script>
+  </body>
 </html>

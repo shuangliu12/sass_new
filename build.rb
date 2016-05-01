@@ -1,3 +1,6 @@
+# any file with 2 references to a build file eg: <!-- header.build.html -->, will have all code in between the comments replaced with 
+#    whatever is in the build file
+
 
 def getBuildFiles(directory)
 	# hash key is file name (path to file not included). hash value is contents of file
@@ -17,8 +20,6 @@ def getBuildFiles(directory)
 	return buildFiles
 end
 
-# any file with 2 references to a build file eg: <!-- header.build.html -->, will have all code in between the comments replaced with 
-#    whatever is in the build file
 def main()
 	path = "*.*"
 	buildFiles = getBuildFiles(path)
