@@ -1,0 +1,41 @@
+img {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+#a {
+    top: 0;
+    left: 0;
+}
+#b {
+    top: 0;
+    left: 170px;
+}
+#c {
+    top: 115px;
+    left: 0;
+}
+#d {
+    top: 200px;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    #a {
+        top: 0;
+        left: 0;
+    }
+    #b {
+        top: 115px;
+        left: 0;
+    }
+    #c {
+        top: 315px;
+        left: 0;
+    }
+    #d {
+        top: 400px;
+        left: 0;
+    }
+}
