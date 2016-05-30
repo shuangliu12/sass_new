@@ -39,7 +39,7 @@ body {
     background-color: #f7f2ec;
 }
 
-.meetAndLunch .meetAndLunch, .mytopia .mytopia, .monolog .monolog, .bullsAndCows .bullsAndCows, .performing .performing, .harpPop .harpPop, .djItUp .djItUp, .birdPage .birdPage, .fineArt .fineArt, .illustrations .illustrations {
+.meetAndLunch .meetAndLunch, .mytopia .mytopia, .monolog .monolog, .bullsAndCows .bullsAndCows, .performing .performing, .harpPop .harpPop, .djItUp .djItUp, .birdPage .birdPage, .fineArt .fineArt, .illustrations .illustrations, .fashionPage .fashionPage {
     text-decoration: underline;
 }
 
@@ -62,7 +62,3 @@ body {
     display: inline;
     font-size:2em;
 }
-
-
-
-
