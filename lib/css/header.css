@@ -26,7 +26,7 @@ body {
 
 .center {
     width: 70%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -61,4 +61,8 @@ body {
 .number {
     display: inline;
     font-size:2em;
+}
+
+.img {
+    margin-bottom: 30px;
 }

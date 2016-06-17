@@ -1,0 +1,38 @@
+.bear {
+  margin-top: 50%; }
+
+.bear img {
+  width: 20%;
+  transform-origin: bottom left;
+  animation: slide 10s infinite; }
+
+.level {
+  background-color: black;
+  width: 80%;
+  height: 10px;
+  margin-bottom: -12%;
+  transform-origin: bottom left;
+  animation: tilt 10s infinite; }
+
+@keyframes tilt {
+  24% {
+    transform: rotate(0deg); }
+  26% {
+    transform: rotate(10deg); }
+  90%, 100% {
+    transform: rotate(10deg); } }
+@keyframes slide {
+  0% {
+    transform: translateY(-320px); }
+  24% {
+    transform: rotate(0deg); }
+  26% {
+    transform: rotate(10deg); }
+  30% {
+    transform: translateX(0px) rotate(10deg); }
+  90% {
+    transform: translate(80%, 18%) rotate(10deg); }
+  100% {
+    transform: translate(80%, 500px) rotate(90deg); } }
+
+/*# sourceMappingURL=bear.css.map */

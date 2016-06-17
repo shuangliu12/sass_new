@@ -1,38 +1,70 @@
-#myCanvas {
-    width:100%;
-    height:100%;
-    border-right: black 1px solid;
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+
+body {
+  font-family: 'Bad Script';
+  background-color: #f7f2ec;
 }
 
-
-/*.landingRight {
-  margin-top: 100px;
-  padding-left: 30px;
-  padding-right: 30px;
-}*/
-
-.numberTitle {
-  font-size: 4em;
+.container {
+  height: 100%;
 }
 
-.numberTitle {
-  font-size: 4em;
-}
-
-.appName {
-  font-size: 1.5em;
-}
-
-img {
-  margin-bottom: 2em;
-  margin-right: 2em;
-    width: 100%;
-    float: left;
-}
-
-a, a:hover {
-  text-decoration: none;
+.fa-envelope-o {
   color: black;
+  font-size: 3em;
+}
+
+#about_me {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#shuangliu {
+  font-size: 4em;
+}
+
+#ux_designer {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+#self-introduction {
+  width: 40%;
+  margin-top: 20px;
+  font-size: 0.9em;
+  line-height: 200%;
+  font-family: Times;
+}
+
+#landing_menu {
+  vertical-align: middle;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+#landing_menu h4 {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5%;
+}
+
+#landing_menu h4 a{
+  color: black;
+  text-decoration: none;
+}
+
+#landing_menu h4:hover {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 5%;
+  text-decoration: none;
+  animation: enlarge 2s ;
+}
+
+@keyframes enlarge {
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 

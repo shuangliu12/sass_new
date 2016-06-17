@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAOA,KAAM;EACJ,gBAAgB,EAHJ,OAAO",
+"sources": ["../sass_folder/main.scss"],
+"names": [],
+"file": "main.css"
+}

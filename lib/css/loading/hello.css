@@ -1,0 +1,72 @@
+.dots {
+  position: fixed;
+  margin-top: 20%;
+  margin-left: 50%; }
+
+.dot {
+  display: inline-block; }
+
+#word1, #word2, #word3, #word4 {
+  font-size: 1em;
+  animation: sayHi 3s infinite;
+  opacity: 0; }
+
+#word1 {
+  color: salmon; }
+
+#word2 {
+  color: lightskyblue;
+  animation-delay: 0.75s; }
+
+#word3 {
+  color: khaki;
+  animation-delay: 1.5s; }
+
+#word4 {
+  color: PaleTurquoise;
+  animation-delay: 2.25s; }
+
+#dot1, #dot2, #dot3, #dot4 {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 40px;
+  animation: jump 3s ease-out infinite; }
+
+#dot1 {
+  background-color: salmon; }
+
+#dot2 {
+  background-color: lightskyblue;
+  animation-delay: 0.75s; }
+
+#dot3 {
+  background-color: khaki;
+  animation-delay: 1.5s; }
+
+#dot4 {
+  background-color: PaleTurquoise;
+  animation-delay: 2.25s; }
+
+@keyframes sayHi {
+  0% {
+    opacity: 0;
+    transform: translateY(-120px); }
+  30% {
+    opacity: 0;
+    transform: translateY(-120px); }
+  50% {
+    opacity: 1;
+    transform: translateY(-120px); }
+  70% {
+    opacity: 0;
+    transform: translateY(-120px); }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px); } }
+@keyframes jump {
+  50% {
+    transform: translateY(-120px); } }
+
+/*# sourceMappingURL=hello.css.map */

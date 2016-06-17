@@ -1,0 +1,11 @@
+{
+    "project_path": "/shuangliudesign4.0/to/scss",
+  "output_path": "/shuangliudesign4.0/to/css",
+  "options": {
+    "cache":         true,
+    "debug":         true,
+    "line-comments": true,
+    "line-numbers":  true,
+    "style":         "nested"
+  }
+}

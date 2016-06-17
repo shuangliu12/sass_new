@@ -1,4 +1,4 @@
-# any file with 2 references to a build file eg: <!-- header.build.html -->, will have all code in between the comments replaced with 
+# any file with 2 references to a build file eg: <!-- header.build.html -->, will have all code in between the comments replaced with
 #    whatever is in the build file
 
 
@@ -30,7 +30,7 @@ def main()
 
 	Dir.glob("#{path}") do |filepath|
 		if filepath.split(//).last(5).join("").to_s == ".html" and filepath.split(//).last(10).join("").to_s != "build.html"
-			buildFiles.each { |buildFileName, buildFileContent| 
+			buildFiles.each { |buildFileName, buildFileContent|
 				# count number of times buildFileName is found in file
 				numFound = 0
 				IO.readlines(filepath).map do |line|
@@ -64,7 +64,7 @@ def main()
 				elsif numFound > 0
 					puts 'Error in ' + filepath + ': There should be 2 separate lines with ' + buildFileName + ', but there are ' + numFound.to_s
 				end
-			}	
+			}
 		end
 	end
 end
