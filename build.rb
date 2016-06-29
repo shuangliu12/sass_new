@@ -1,5 +1,6 @@
 # any file with 2 references to a build file eg: <!-- header.build.html -->, will have all code in between the comments replaced with
 #    whatever is in the build file
+# to run, open the terminal and change to this directory. type in the terminal "ruby build.rb"
 
 
 def getBuildFiles(directory)

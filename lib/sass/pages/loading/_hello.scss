@@ -1,0 +1,82 @@
+$size : 25px;
+$red : salmon;
+$blue : lightskyblue;
+$yellow : khaki;
+$green : PaleTurquoise;
+$duration : 3s;
+$font-size : 1em;
+
+.dots {
+  position: relative;
+  margin-top: 40%;
+  margin-left: 30%;
+  .dot {
+    display: inline-block;
+    margin-right: 2%;
+    #word1, #word2, #word3, #word4 {
+      font-size: $font-size;
+      animation: sayHi $duration infinite;
+      opacity: 0;
+    }
+
+    #word1 {
+      color : $red;
+    }
+
+    #word2 {
+      color : $blue;
+      animation-delay: $duration/4;
+    }
+
+    #word3 {
+      color: $yellow;
+      animation-delay: $duration/2;
+    }
+
+    #word4 {
+      color: $green;
+      animation-delay: $duration*3/4;
+    }
+
+    #dot1, #dot2, #dot3, #dot4 {
+      height: $size;
+      width: $size;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 4px;
+      animation: jump $duration ease-out infinite;
+    }
+
+    #dot1 {
+      background-color: $red;
+    }
+
+    #dot2 {
+      background-color: $blue;
+      animation-delay: $duration/4;
+    }
+
+    #dot3 {
+      background-color: $yellow;
+      animation-delay: $duration/2;
+    }
+
+    #dot4 {
+      background-color: $green;
+      animation-delay: $duration*3/4;
+    }
+  }
+}
+
+
+@keyframes sayHi {
+  0% { opacity: 0; transform: translateY($size*(-3));}
+  30% { opacity: 0; transform: translateY($size*(-3));}
+  50% { opacity: 1; transform: translateY($size*(-3));}
+  70% { opacity: 0; transform: translateY($size*(-3));}
+  100% { opacity: 0; transform: translateY($size*(-3));}
+}
+
+@keyframes jump {
+  50% { transform: translateY($size*(-3));}
+}

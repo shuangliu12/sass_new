@@ -1,0 +1,45 @@
+$img-width: 100px;
+$lever-width: $img-width*5;
+$lever-height: 10px;
+
+
+.bear {
+  margin-top: 25%;
+}
+
+.bear img {
+  width: $img-width;
+  transform-origin: bottom left;
+  animation: slide 10s infinite;
+}
+
+
+.level {
+  background-color: black;
+  width: $lever-width;
+  height: $lever-height;
+  margin-bottom: -60px;
+  transform-origin: bottom left;
+  animation: tilt 10s infinite; }
+
+@keyframes tilt {
+  24% {
+    transform: rotate(0deg); }
+  26% {
+    transform: rotate(10deg); }
+  90%, 100% {
+    transform: rotate(10deg); } }
+
+@keyframes slide {
+  0% {
+    transform: translateY(-200px); }
+  24% {
+    transform: rotate(0deg); }
+  26% {
+    transform: rotate(10deg); }
+  30% {
+    transform: translateX(0px) rotate(10deg); }
+  90% {
+    transform: translate(500px, 90px) rotate(10deg); }
+  100% {
+    transform: translate(500px, 1320px) rotate(90deg); } }

@@ -2,21 +2,60 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="lib/css/loading/bear.css">
-  <link rel="stylesheet" type="text/css" href="lib/css/loading/hello.css">
+<!--   <link rel="stylesheet" type="text/css" href="lib/css/loading/bear.css">
+  <link rel="stylesheet" type="text/css" href="lib/css/loading/hello.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="lib/sass/pages/loading/_hello.css">
+
+  <link rel="stylesheet" type="text/css" href="lib/sass/pages/loading/_bear.css">
+
+   <link rel="stylesheet" type="text/css" href="lib/sass/pages/loading/_loading.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class = 'col-sm-4 box'>
-        <!-- bear -->
-        <div class = 'bear'>
-          <div class = 'level'></div>
-          <img src="lib/img/loading/bear.svg">
-        </div>
-      </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="center">
+            <div class="sideMenu">
+              <!-- <h1 class='shuangliu'><a href="index.html">Shuang Liu</a></h1> -->
+              <div class='shuangliu_div'>
+                <a href="index.html">
+                  <h1 class='shuangliu'>SL</h1>
+                </a>
 
+              </div>
+              <h2 class='contents'>Contents</h2>
+              <hr>
+              <h3><span class="number">1</span> Applications</h3>
+              <ul class="contents_list">
+                <li class='meetAndLunch'><a href="meet_and_lunch.html">Meet and Lunch</a></li>
+              </ul>
+              <h3><span class="number">2</span> Game Design</h3>
+              <ul class="contents_list">
+                <li class='bullsAndCows'><a href="bulls_and_cows.html">Bulls and Cows</a></li>
+              </ul>
+              <h3><span class="number">3</span> Motion Art</h3>
+              <ul class="contents_list">
+                <li><a href=""></a>Loading Animation</li>
+                <li class='performing'><a href="performing.html">Performing</a></li>
+                <li class='harpPop'><a href="harp.html">Play the Harp</a></li>
+                <li class='djItUp'><a href="DJ.html">DJ It Up</a></li>
+                <li class='birdPage'><a href="birds.html">Don't Startle the Birds</a></li>
+              </ul>
+              <h3><span class="number">4</span>Illustrations</h3>
+              <ul class="contents_list">
+                <li class='fineArt'><a href="fine_art.html">Paintings & Drawings</a></li>
+                <li class='illustrations'><a href="illustrations.html">Conceptual Illustrations</a></li>
+                <li>Graphic Design</li>
+                <li class='fashionPage'><a href="fashion.html">Fashion Illustrations</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  <div class="container-fluid">
+    <p>A fun loading animation makes waiting a lot easier. </p>
+    <div class="row">
       <div class = 'col-sm-4 box'>
         <!-- hello -->
         <div class = 'dots'>
@@ -40,14 +79,18 @@
             <div id = 'dot4'></div>
           </div>
         </div>
-      <div>
+      </div>
 
       <div class = 'col-sm-4 box'>
+        <div class = 'bear'>
+          <div class = 'level'></div>
+          <img src="lib/img/loading/bear.svg">
+        </div>
       </div>
 
     </div>
-  </div>
 
+  </div>
 </body>
 
 </html>

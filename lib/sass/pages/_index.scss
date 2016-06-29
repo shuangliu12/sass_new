@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+$front_page_font: 'Bad Script';
+$background-color-brown: #f7f2ec;
+$shuangliu_font_size: 4em;
+$screen_width: 100%;
+// $triangle: url('../../img/triangle.png');
+
+body {
+  font-family: $front_page_font;
+  background: {
+    size: 120px 120px;
+    // color: $background-color-brown;
+    // repeat: round;
+    // image: $triangle;
+  }
+}
+
+.container-fluid {
+  margin-top: 10%;
+  #cactus img{
+    width: 40%;
+    float: left;
+    margin-left: 40%;
+    outline: 1px solid transparent;
+    animation: swing 20s infinite;
+    transform-origin: bottom;
+  }
+  #about_me {
+    text-align: center;
+    margin-top: 5%;
+    #shuangliu {
+      font-size: $shuangliu_font_size;
+    }
+
+    #ux_designer {
+      font-size: 1.5em;
+      margin-top: 30px;
+
+      .fa-envelope {
+        color: black;
+      }
+    }
+
+    #self-introduction {
+      margin-top: 10%;
+      font-size: 1.4em;
+      font-family: Times;
+    }
+  }
+
+  #landing_menu {
+    margin-left: 35%;
+    h4 {
+      font-size: 1.5em;
+      display: inline-block;
+      margin-right: 5%;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      &:hover {
+        font-size: 1.5em;
+        display: inline-block;
+        margin-right: 5%;
+        text-decoration: none;
+        animation: enlarge 1s;
+      }
+    }
+  }
+}
+
+
+@keyframes enlarge {
+ 50% {transform: scale(1.1);}
+}
+
+@keyframes swing {
+  30% {transform: rotate(20deg);}
+  60% {transform: rotate(-10deg);}
+}
+
+
+
+
+
