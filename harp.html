@@ -10,7 +10,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="lib/css/header.css">
     <link rel="stylesheet" type="text/css" href="lib/sass/pages/_menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="lib/js/menu.js"></script>
+
     <!-- head.build.html -->
     <script type="text/javascript" src="lib/js/paper-full.min.js"></script>
     <script src="http://w.soundcloud.com/player/api.js"></script>
@@ -18,44 +20,53 @@
 
   <body class="harpPop">
     <!-- menu.build.html -->
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="center">
-						<div class="sideMenu">
-							<div class='shuangliu_div'>
-								<a href="index.html">
-									<h1 class='shuangliu'>SL</h1>
-								</a>
-							</div>
-							<h2 class='contents'>Contents</h2>
-							<hr>
-							<h3><span class="number">1</span> Designs </h3>
-							<ul class="contents_list">
-								<li class='meetAndLunch'><a href="meet_and_lunch.html">Meet and Lunch</a></li>
-								<li class='bullsAndCows'><a href="bulls_and_cows.html">Bulls and Cows</a></li>
-							</ul>
-							<h3><span class="number">2</span> Motion Graphics</h3>
-							<ul class="contents_list">
-								<li><a href=""></a>Loading Animation</li>
-								<li class='performing'><a href="performing.html">Performing</a></li>
-								<li class='harpPop'><a href="harp.html">Play the Harp</a></li>
-								<li class='djItUp'><a href="DJ.html">DJ It Up</a></li>
-								<li class='birdPage'><a href="birds.html">Don't Startle the Birds</a></li>
-							</ul>
-							<h3><span class="number">3</span>Fine Arts</h3>
-							<ul class="contents_list">
-								<li class='illustrations'><a href="illustrations.html">Conceptual Illustrations</a></li>
-								<li class='fashionPage'><a href="fashion.html">Fashion Illustrations</a></li>
-								<li class='fineArt'><a href="fine_art.html">Paintings & Drawings</a></li>
-							</ul>
-							<h3><span class="number">4</span><a href="resume.pdf">Resume</a></h3>
-						</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="center">
+				<div class="sideMenu">
+					<div class='shuangliu_div'>
+						<a href="index.html">
+							<h1 class='shuangliu'>SL</h1>
+						</a>
 					</div>
-				</div>
+					<h2 class='contents'>Contents</h2>
+					<hr>
 
-				<div class="col-sm-9 right">
-					<div id="main">
+					<div class = 'menuTitle'>
+						<h3><span class="number">1</span> Designs </h3>
+						<ul class='contents_list'>
+							<li class='meetAndLunch'><a href="meet_and_lunch.html">Meet and Lunch</a></li>
+							<li class='bullsAndCows'><a href="bulls_and_cows.html">Bulls and Cows</a></li>
+						</ul>
+					</div>
+
+					<div class = 'menuTitle'>
+						<h3><span class="number">2</span> Motion Graphics</h3>
+						<ul class="contents_list">
+							<li><a href=""></a>Loading Animation</li>
+							<li class='performing'><a href="performing.html">Performing</a></li>
+							<li class='harpPop'><a href="harp.html">Play the Harp</a></li>
+							<li class='djItUp'><a href="DJ.html">DJ It Up</a></li>
+							<li class='birdPage'><a href="birds.html">Don't Startle the Birds</a></li>
+						</ul>
+					</div>
+
+					<div class = 'menuTitle'>
+						<h3><span class="number">3</span>Fine Arts</h3>
+						<ul class="contents_list">
+							<li class='illustrations'><a href="illustrations.html">Conceptual Illustrations</a></li>
+							<li class='fashionPage'><a href="fashion.html">Fashion Illustrations</a></li>
+							<li class='fineArt'><a href="fine_art.html">Paintings & Drawings</a></li>
+						</ul>
+					</div>
+
+					<h3><span class="number">4</span><a href="resume.pdf">Resume</a></h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-9 right">
           <!-- menu.build.html -->
             <div class="mainCanvasDiv">
               <canvas id="myCanvas", style="height:500px;width:100%; margin-top:70px;"></canvas>

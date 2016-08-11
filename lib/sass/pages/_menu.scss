@@ -21,6 +21,10 @@ a, a:hover {
   color: black;
 }
 
+.menuTitle h3 {
+  cursor: pointer;
+}
+
 @keyframes nameSpin {
   0% {
     transform: rotateY(0);
