@@ -5,11 +5,6 @@
   text-align: center;
 }
 
-.shuangliu_div a,.shuangliu_div a:hover {
-  text-decoration: none;
-  color: black;
-}
-
 .shuangliu_div {
   border: black solid 3px;
   height: 120px;
@@ -19,6 +14,11 @@
 
 .shuangliu_div:hover {
   animation: nameSpin 10s infinite;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: black;
 }
 
 @keyframes nameSpin {
