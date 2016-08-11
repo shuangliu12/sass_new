@@ -1,29 +1,20 @@
 @import 'https://fonts.googleapis.com/css?family=Lato';
-$background-color-brown: #f7f2ec;
 $front_page_font: 'Lato';
 $shuangliu_font_size: 4em;
 $screen_width: 100%;
-// $triangle: url('../../img/triangle.png');
 
 body {
   font-family: $front_page_font;
-  background: {
-    size: 120px 120px;
-    // color: $background-color-brown;
-    // repeat: round;
-    // image: $triangle;
-  }
+  background-color: #8797a8;
+  color: white;
 }
 
 .container-fluid {
   margin-top: 10%;
-  #cactus img{
+  #octocat img{
     width: 40%;
     float: left;
     margin-left: 40%;
-    outline: 1px solid transparent;
-    animation: swing 20s infinite;
-    transform-origin: bottom;
   }
   #about_me {
     text-align: center;
@@ -33,29 +24,45 @@ body {
     }
 
     #ux_designer {
-      font-size: 1.5em;
+      font-size: 2em;
       margin-top: 30px;
 
-      .fa-envelope {
-        color: black;
-      }
     }
 
     #self-introduction {
       margin-top: 10%;
-      font-size: 1.4em;
-      font-family: Times;
+      font-size: 1.5em;
+      p {
+        line-height: 200%;
+        .emphasize {
+          color: #D6DEFF;
+        }
+      }
     }
   }
 
+  .socialMedia{
+    margin-top: -8%;
+    margin-left: 42%;
+    .fa {
+      color: white;
+      font-size: 2.5em;
+    }
+    a {
+      margin-right: 20px;
+    }
+
+  }
+
   #landing_menu {
-    margin-left: 35%;
+    margin-top: -3%;
+    margin-left: 32%;
     h4 {
       font-size: 1.5em;
       display: inline-block;
       margin-right: 5%;
       a {
-        color: black;
+        color: white;
         text-decoration: none;
       }
       &:hover {
@@ -70,13 +77,9 @@ body {
 }
 
 @keyframes enlarge {
- 50% {transform: scale(1.1);}
+ 50% {transform: scale(0.99);}
 }
 
-@keyframes swing {
-  30% {transform: rotate(20deg);}
-  60% {transform: rotate(-10deg);}
-}
 
 
 

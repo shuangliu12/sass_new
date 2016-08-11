@@ -1,10 +1,16 @@
-$bg-brown: #f7f2ec;
-$box-height: 400px;
+// $bg-brown: #f7f2ec;
+
+$box-height: 300px;
 
 
 .box {
-  background-color: $bg-brown;
-  // margin: 5%;
+  background-color: #787878;
   height: $box-height;
-  // width: 50%;
+  margin-top: 10%;
+}
+
+.loadingTitle {
+  margin: auto;
+  width: 30%;
+  margin-top: 10%;
 }

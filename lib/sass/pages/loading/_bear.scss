@@ -1,5 +1,5 @@
 $img-width: 100px;
-$lever-width: $img-width*5;
+$lever-width: $img-width*4;
 $lever-height: 10px;
 
 
@@ -32,7 +32,7 @@ $lever-height: 10px;
 
 @keyframes slide {
   0% {
-    transform: translateY(-200px); }
+    transform: translateY(-80px); }
   24% {
     transform: rotate(0deg); }
   26% {
@@ -40,6 +40,6 @@ $lever-height: 10px;
   30% {
     transform: translateX(0px) rotate(10deg); }
   90% {
-    transform: translate(500px, 90px) rotate(10deg); }
+    transform: translate(400px, 70px) rotate(10deg); }
   100% {
-    transform: translate(500px, 1320px) rotate(90deg); } }
+    transform: translate(400px, 1320px) rotate(90deg); } }
