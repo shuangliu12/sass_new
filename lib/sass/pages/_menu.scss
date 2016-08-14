@@ -53,7 +53,7 @@ body {
     height: calc(100vh - 150px);
 }
 
-.sideMenu {
+#sideMenu {
     font-family: Calibri;
     position: fixed;
 }
@@ -64,7 +64,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .sideMenu {
+    #sideMenu {
         position: static;
     }
 }
