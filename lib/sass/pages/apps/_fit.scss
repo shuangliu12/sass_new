@@ -1,0 +1,16 @@
+.persona-card {
+  // background: white;
+  border: solid white 2px;
+  .list-title {
+    font-size: 1.4em;
+  }
+  ul {
+    // list-style-type: none;
+    li {
+      margin-bottom: 5px;
+      font-size: 1.3em;
+      color: gray;
+    }
+  }
+}
+
